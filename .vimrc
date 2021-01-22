@@ -2,7 +2,7 @@
 " possible, as it has side effects.
 set nocompatible
 
-" Highlight current line
+"  current line
 " Leader
 syntax on
 let mapleader = ","
@@ -30,13 +30,6 @@ endif
 
 autocmd BufWritePre *.go :Fmt
 filetype plugin indent on
-" 允许backspace和光标键跨越行边界
-set whichwrap+=<,>,h,l
-" 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
-set mouse=a
-"set selection=exclusive
-"set selectmode=mouse
-" 光标移动到buffer的顶部和底部时保持3行距离
 set scrolloff=3
 augroup vimrcEx
   autocmd!
@@ -190,8 +183,6 @@ map <Leader>a :call RunAllSpecs()<CR>
 " Vim-instant-markdown doesn't work in zsh
 set shell=bash\ -i
 
-" Snippets author
-let g:snips_author = 'Yuez'
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
