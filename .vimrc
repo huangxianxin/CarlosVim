@@ -1,6 +1,6 @@
 if filereadable(expand("~/.vim/extends.vim"))
-  source ./extends.vim
-  source ./basic.vim
+  source ~/vim/extends.vim
+  source ~/vim/init.vim
 endif
 set number
 set softtabstop=2
