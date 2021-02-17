@@ -1,0 +1,66 @@
+{
+	"coc.preferences.formatOnSaveFiletypes": [
+		"json",
+		"python",
+		"svelte",
+		"c",
+		"java",
+		"scala",
+		"rs"
+	],
+	"java.enabled": true,
+	"java.home": "/opt/homebrew/Cellar/openjdk@11/11.0.9/",
+	"java.jdt.ls.home": "~/.vim/jdt",
+	"jedi.enable": true,
+	"jedi.markupKindPreferred": "plaintext",
+	"jedi.jediSettings.autoImportModules": [],
+	"jedi.executable.command": "jedi-language-server",
+	"jedi.executable.args": [],
+	"jedi.completion.disableSnippets": false,
+	"jedi.diagnostics.enable": true,
+	"jedi.diagnostics.didOpen": true,
+	"jedi.diagnostics.didChange": true,
+	"jedi.diagnostics.didSave": true,
+	"diagnostic-languageserver.filetypes": {
+		"python": "pylint"
+	},
+	"diagnostic-languageserver.linters": {
+		"pylint": {
+			"sourceName": "pylint",
+			"command": "pylint",
+			"args": [
+				"--output-format",
+				"text",
+				"--score",
+				"no",
+				"--msg-template",
+				"'{line}:{column}:{category}:{msg} ({msg_id}:{symbol})'",
+				"%file"
+			],
+			"formatPattern": [
+				"^(\\d+?):(\\d+?):([a-z]+?):(.*)$",
+				{
+					"line": 1,
+					"column": 2,
+					"security": 3,
+					"message": 4
+				}
+			],
+			"rootPatterns": [
+				".git",
+				"pyproject.toml",
+				"setup.py"
+			],
+			"securities": {
+				"informational": "hint",
+				"refactor": "info",
+				"convention": "info",
+				"warning": "warning",
+				"error": "error",
+				"fatal": "error"
+			},
+			"offsetColumn": 1,
+			"formatLines": 1
+		}
+	}
+}
